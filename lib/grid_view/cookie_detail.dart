@@ -78,9 +78,7 @@ class CookieDetail extends StatelessWidget {
                         backgroundColor: Color(0xff00FFF7),
                         radius: 56,
                         child: CircleAvatar(
-                          backgroundImage: NetworkImage(
-                            "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg",
-                          ),
+                          backgroundImage: AssetImage('assets/images/girl.jpg'),
                           radius: 53.0,
                         ),
                       ),
