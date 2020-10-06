@@ -22,6 +22,7 @@ class _MyHomePageState extends State<MyHomePage>
     var liveStream = Icons.play_circle_filled_outlined;
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,

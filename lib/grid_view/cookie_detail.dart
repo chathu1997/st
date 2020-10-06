@@ -11,15 +11,26 @@ class CookieDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Padding(
+          padding: const EdgeInsets.only(right: 180.0),
+          child: new Text(
+            'Me',
+            style: TextStyle(
+              fontSize: 35.0,
+              color: Color(0xff00DBD4),
+            ),
+          ),
+        ),
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Color(0xFF545D68)),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
+        // leading: IconButton(
+        //   icon: Icon(Icons.arrow_back, color: Color(0xFF545D68)),
+        //   onPressed: () {
+        //     Navigator.of(context).pop();
+        //   },
+        // ),
         // title: Text('Pickup',
         //     style: TextStyle(
         //         fontFamily: 'Varela',
@@ -27,79 +38,16 @@ class CookieDetail extends StatelessWidget {
         //         color: Color(0xFF545D68))),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+            icon: Icon(Icons.search, color: Colors.black),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.radio, color: Colors.black),
             onPressed: () {},
           ),
         ],
       ),
-      body:
-          // ListView(children: [
-          //   SizedBox(height: 15.0),
-          //   Padding(
-          //     padding: EdgeInsets.only(left: 20.0),
-          //     // child: Text('Cookie',
-          //     //     style: TextStyle(
-          //     //         fontFamily: 'Varela',
-          //     //         fontSize: 42.0,
-          //     //         fontWeight: FontWeight.bold,
-          //     //         color: Color(0xFF6F35A5))),
-          //   ),
-          //   SizedBox(height: 15.0),
-          //   Hero(
-          //       tag: assetPath,
-          //       child: Image.asset(assetPath,
-          //           height: 250.0, width: 250.0, fit: BoxFit.contain)),
-          //   SizedBox(height: 20.0),
-          //   Center(
-          //       // child: Text(cookieprice,
-          //       //     style: TextStyle(
-          //       //         fontFamily: 'Varela',
-          //       //         fontSize: 22.0,
-          //       //         fontWeight: FontWeight.bold,
-          //       //         color: Color(0xFFF17532))),
-          //       ),
-          //   SizedBox(height: 10.0),
-          //   Center(
-          //       // child: Text(cookiename,
-          //       //     style: TextStyle(
-          //       //         color: Color(0xFF575E67),
-          //       //         fontFamily: 'Varela',
-          //       //         fontSize: 24.0)),
-          //       ),
-          //   SizedBox(height: 20.0),
-          //   Center(
-          //     child: Container(
-          //       width: MediaQuery.of(context).size.width - 50.0,
-          //       child: Text(
-          //           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ex quis magna tincidunt, eget molestie sem consequat. Pellentesque accumsan luctus justo quis blandit. Morbi nisi tellus, elementum ut ipsum sit amet, condimentum volutpat lacus. ',
-          //           textAlign: TextAlign.center,
-          //           style: TextStyle(
-          //               fontFamily: 'Varela',
-          //               fontSize: 14.0,
-          //               color: Color(0xFFB4B8B9))),
-          //     ),
-          //   ),
-          //   SizedBox(height: 20.0),
-          //   Center(
-          //       child: Container(
-          //           width: MediaQuery.of(context).size.width - 50.0,
-          //           height: 50.0,
-          //           decoration: BoxDecoration(
-          //               borderRadius: BorderRadius.circular(25.0),
-          //               color: Color(0xFFF1E6FF)),
-          //           child: Center(
-          //               child: Text(
-          //             'Continue',
-          //             style: TextStyle(
-          //                 // fontFamily: 'Varela',
-          //                 fontSize: 16.0,
-          //                 fontWeight: FontWeight.bold,
-          //                 color: Colors.black45),
-          //           ))))
-          // ]
-          // ),
-//////////////////////////////////////////////////////
-          Column(
+      body: Column(
         children: <Widget>[
           Container(
               decoration: BoxDecoration(
@@ -128,12 +76,12 @@ class CookieDetail extends StatelessWidget {
                       //   ),
                       CircleAvatar(
                         backgroundColor: Color(0xff00FFF7),
-                        radius: 55,
+                        radius: 56,
                         child: CircleAvatar(
                           backgroundImage: NetworkImage(
                             "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg",
                           ),
-                          radius: 50.0,
+                          radius: 53.0,
                         ),
                       ),
                       SizedBox(
@@ -157,17 +105,17 @@ class CookieDetail extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 2.0,
+                        height: 0.0,
                       ),
                       Card(
                         margin: EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 5.0),
+                            horizontal: 0.0, vertical: 5.0),
                         clipBehavior: Clip.antiAlias,
                         color: Colors.white,
                         elevation: 0.0,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 8.0, vertical: 22.0),
+                              horizontal: 0.0, vertical: 22.0),
                           child: Row(
                             children: <Widget>[
                               Expanded(
@@ -178,7 +126,7 @@ class CookieDetail extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 35.0,
-                                        fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w400,
                                       ),
                                     ),
                                     SizedBox(
@@ -202,7 +150,7 @@ class CookieDetail extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 35.0,
-                                        fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w400,
                                       ),
                                     ),
                                     SizedBox(
@@ -226,19 +174,29 @@ class CookieDetail extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 35.0,
-                                        fontWeight: FontWeight.bold,
+                                        // fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w400,
                                       ),
                                     ),
                                     SizedBox(
                                       height: 5.0,
                                     ),
-                                    Text(
-                                      "Fans",
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        color: Colors.black,
-                                      ),
-                                    )
+                                    RichText(
+                                        text: TextSpan(
+                                            text: 'Fans',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20.0,
+                                            ),
+                                            children: <TextSpan>[
+                                          TextSpan(
+                                              text: '+11',
+                                              style: TextStyle(
+                                                color: Colors.red,
+                                                fontWeight: FontWeight.bold,
+                                              ))
+                                        ]))
                                   ],
                                 ),
                               ),
@@ -253,42 +211,155 @@ class CookieDetail extends StatelessWidget {
           Container(
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 30.0, horizontal: 16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  Icon(
+                    Icons.event,
+                    color: Color(0xff00DBD4),
+                    size: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                  ),
                   Text(
-                    "Bio:",
+                    "My Post",
                     style: TextStyle(
-                        color: Colors.redAccent,
+                        color: Colors.black,
                         fontStyle: FontStyle.normal,
-                        fontSize: 28.0),
+                        fontSize: 20.0),
                   ),
                   SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    'My name is Alice and I am  a freelance mobile app developper.\n',
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w300,
-                      color: Colors.black,
-                      letterSpacing: 2.0,
-                    ),
+                    height: 15.0,
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(
-            height: 20.0,
+          Container(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Icon(
+                    Icons.message,
+                    color: Color(0xff00DBD4),
+                    size: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                  ),
+                  Text(
+                    "Messages",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 20.0),
+                  ),
+                  // SizedBox(
+                  //   height: 15.0,
+                  // ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Icon(
+                    Icons.wallet_giftcard,
+                    color: Color(0xff00DBD4),
+                    size: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                  ),
+                  Text(
+                    "Wallet",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 20.0),
+                  ),
+                  // SizedBox(
+                  //   height: 15.0,
+                  // ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Icon(
+                    Icons.settings,
+                    color: Color(0xff00DBD4),
+                    size: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                  ),
+                  Text(
+                    "Settings",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 20.0),
+                  ),
+                  // SizedBox(
+                  //   height: 15.0,
+                  // ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Icon(
+                    Icons.help_center,
+                    color: Color(0xff00DBD4),
+                    size: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                  ),
+                  Text(
+                    "Help & Feedback",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 20.0),
+                  ),
+                  // SizedBox(
+                  //   height: 15.0,
+                  // ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
-
-////////////////////////////      // ////////
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Color(0xff00DBD4),
